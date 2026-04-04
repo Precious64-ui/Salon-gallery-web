@@ -181,12 +181,16 @@ html, body {
   font-size: 2.5rem;
   margin-bottom: 20px;
   font-family: serif;
+  text-align: center;
+  margin-right: 10px;
 }
 
 .about-text p {
   line-height: 1.7;
   color: white;
   max-width: 500px;
+  text-align: center;
+  margin-right: 10px;
 }
 
 .about-img{
