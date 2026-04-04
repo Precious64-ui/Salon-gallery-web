@@ -53,8 +53,13 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// Add this to your script to test if the click is even happening
-hamburger.addEventListener('click', () => {
-    console.log("Hamburger was clicked!"); // Check your browser console (F12) for this message
-    navLinks.classList.toggle('active');
-});
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('nav-links');
+
+    hamburger.addEventListener('click', () => {
+        // This line adds/removes the "active" class whenever you click
+        navLinks.classList.toggle('active');
+        
+        // Optional: Animate the hamburger to an "X"
+        hamburger.classList.toggle('toggle');
+    });
