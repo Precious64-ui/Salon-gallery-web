@@ -525,6 +525,10 @@ footer .socials a:hover {
 
     .about-text h2 {
         font-size: 2rem;
+        text-align: center;
+    }
+    .about-text p {
+        text-align: center;
     }
 }
 
