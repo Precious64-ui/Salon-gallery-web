@@ -52,3 +52,9 @@ window.addEventListener('scroll', () => {
         navbar.style.boxShadow = "none";
     }
 });
+
+// Add this to your script to test if the click is even happening
+hamburger.addEventListener('click', () => {
+    console.log("Hamburger was clicked!"); // Check your browser console (F12) for this message
+    navLinks.classList.toggle('active');
+});

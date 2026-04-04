@@ -11,6 +11,7 @@ html, body {
 
 .navbar{
     position: sticky;
+    z-index: 9999;
  display: flex;
  top: 0;
   justify-content: space-between;
@@ -32,7 +33,9 @@ html, body {
 }
 
 .nav-links a {
+    position: relative;
   text-decoration: none;
+  z-index: 10000;
   color: rgb(0, 0, 0);
   font-weight: 500;
   transition: color 0.3s;
@@ -169,6 +172,7 @@ html, body {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  text-align: center;
   justify-content: center;
   gap: 30px;
 }
