@@ -1,0 +1,505 @@
+
+.navbar{
+    position: sticky;
+ display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  margin: auto;
+ 
+  color: rgb(0, 0, 0);
+}
+
+
+.nav-links {
+ display: flex;
+ list-style: none;
+}
+
+.nav-links li {
+  margin-left: 30px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+   color: red;
+}
+
+.logo{
+    font-size: 30px;
+}
+
+.book-btn{
+    text-decoration: none;
+    color: white;
+    background-color: black;
+    padding: 10px;
+    border-radius: 10px;
+}
+.book-btn:hover{
+    color: red;
+}
+
+/* Hide hamburger by default */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: black;
+    transition: 0.3s;
+}
+
+#hero{
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(images/black-white-room-with-neon-lights_960396-548722.jpg);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+#hero-content {
+  max-width: 600px;
+  padding: 20px;
+}
+
+#hero button {
+    padding: 15px 30px;
+    background-color: red; /* Matching your logo accent */
+    color: white;
+    border: none;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#hero button:hover {
+    background-color: darkred;
+    transform: scale(1.05);
+}
+
+#hero h1 {
+  font-size: 4rem;
+  margin-bottom: 15px;
+  font-family: serif;
+}
+
+#hero p {
+  font-size: 1.1rem;
+  margin-bottom: 25px;
+  line-height: 1.6;
+}
+
+#services {
+    padding: 80px 5%;
+    text-align: center;
+    background-color: #fafafa; /* Very light gray to distinguish from gallery */
+}
+
+.services-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 40px;
+    flex-wrap: wrap; /* Important for mobile responsiveness */
+}
+
+.service-card {
+    background: #fff;
+    padding: 40px 30px;
+    border-radius: 8px;
+    flex: 1; /* Makes cards grow equally */
+    min-width: 280px; /* Prevents cards from getting too small on phones */
+    max-width: 350px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05); /* Soft minimalist shadow */
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-10px); /* Subtle lift on hover */
+}
+
+.service-card h3 {
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+}
+
+.service-card p {
+    line-height: 1.6;
+    color: #666;
+}
+
+
+#about{
+    padding: 80px;
+    background: black;
+    color: white;
+}
+
+.about-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+}
+
+.about-text h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  font-family: serif;
+}
+
+.about-text p {
+  line-height: 1.7;
+  color: white;
+  max-width: 500px;
+}
+
+.about-img{
+    width: 100%;
+    max-width: 400px;
+    border-radius:50px;   
+}
+
+
+
+    /* Gallery Container */
+.gallery-section {
+    padding: 80px 5%;
+    background-color: #fff;
+}
+
+.gallery-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* The Grid Setup */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr); /* 12-column system for flexibility */
+    grid-gap: 15px;
+}
+
+/* Base Item Style */
+.gallery-item {
+    position: relative;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 4px;
+    background-color: #f4f4f4;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Hover Overlay */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.overlay span {
+    color: white;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    border-bottom: 1px solid white;
+}
+
+/* Hover Actions */
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+.gallery-item:hover .overlay {
+    opacity: 1;
+}
+
+/* Grid Logic for 4-3-1-1 Layout */
+
+/* The 4 Row */
+.gallery-item { grid-column: span 3; } 
+
+/* The 3 Row */
+.gallery-item.span-wide { grid-column: span 4; }
+
+/* The Featured "1" (Large) */
+.gallery-item.featured { 
+    grid-column: span 8; 
+    height: 615px; /* Spans two rows essentially */
+}
+
+/* The Final "1" */
+.gallery-item.footer-img { 
+    grid-column: span 4; 
+    height: 615px; 
+}
+
+
+#testimonials {
+    padding: 80px 5%;
+    background-color: #fff;
+    text-align: center;
+}
+
+.testimonial-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    margin-top: 50px;
+}
+
+.testimonial-card {
+    padding: 20px;
+    border-left: 2px solid #000; /* Minimalist accent */
+    text-align: left;
+}
+
+.quote {
+    font-size: 1.2rem;
+    font-style: italic;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.client-name {
+    font-weight: 700;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #888;
+}
+
+#contact {
+    padding: 80px 5%;
+    background-color: #f9f9f9;
+}
+
+.contact-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.contact-wrapper {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr; /* Form is slightly wider than info */
+    gap: 60px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* Form Styling */
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.input-group {
+    display: flex;
+    gap: 20px;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+input:focus, select:focus, textarea:focus {
+    border-color: #000; /* Sharp tech focus effect */
+}
+
+.submit-btn {
+    padding: 18px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+.submit-btn:hover {
+    opacity: 0.8;
+}
+
+/* Info Styling */
+.info-item {
+    margin-bottom: 30px;
+}
+
+.info-item h3 {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    color: #888;
+}
+
+.whatsapp-link {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 25px;
+    border: 1px solid #25D366; /* WhatsApp Green */
+    color: #25D366;
+    text-decoration: none;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+}
+
+.whatsapp-link:hover {
+    background-color: #25D366;
+    color: #fff;
+}
+
+footer {
+  background-color: #111;       /* Dark background for contrast */
+  color: #f5f5f5;               /* Light text for readability */
+  text-align: center;           /* Center everything */
+  padding: 2rem 1rem;           /* Space around content */
+}
+
+footer h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #fff;                  /* Strong headline */
+}
+
+footer .sub-headline {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  color: #ccc;                  /* Softer tone for subtext */
+}
+
+footer .btn {
+  display: inline-block;
+  background-color: #e63946;    /* Accent color (red) */
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  margin-bottom: 1.5rem;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background 0.3s ease;
+}
+
+footer .btn:hover {
+  background-color: #d62828;    /* Darker hover effect */
+}
+
+footer .footer-links {
+  margin: 1rem 0;
+}
+
+footer .footer-links a {
+  color: #f5f5f5;
+  text-decoration: none;
+  margin: 0 0.5rem;
+  transition: color 0.3s ease;
+}
+
+footer .footer-links a:hover {
+  color: #e63946;               /* Accent hover */
+}
+
+footer .socials {
+  margin-top: 1rem;
+}
+
+footer .socials a {
+  color: #ccc;
+  text-decoration: none;
+  margin: 0 0.5rem;
+  transition: color 0.3s ease;
+}
+
+footer .socials a:hover {
+  color: #fff;                  /* Bright hover */
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .gallery-item, .gallery-item.span-wide, .gallery-item.featured, .gallery-item.footer-img {
+        grid-column: span 12; /* Stack everything vertically on phones */
+        height: 350px;
+    }
+}
+
+/* Mobile Styling */
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+        z-index: 1001;
+    }
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .contact-wrapper {
+        grid-template-columns: 1fr; /* Stacks form and info */
+    }
+    
+    .input-group {
+        flex-direction: column;
+    }
+}
+
+/* Mobile-friendly adjustments */
+@media (max-width: 600px) {
+  footer h2 {
+    font-size: 1.25rem;
+  }
+  footer .btn {
+    width: 100%;                /* Full-width button on mobile */
+    padding: 1rem;
+  }
+}
+
+.services-container {
+    display: flex;
+    flex-direction: column; /* Mobile first */
+}
+
+@media (min-width: 768px) {
+    .services-container {
+        flex-direction: row; /* Side-by-side for desktop */
+    }
+}
+}

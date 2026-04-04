@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salon Gallery Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">Oura <span style="color: red;">Studio</span></div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+
+          <div class="nav-right">
+        <a href="#" class=" book-btn">Book Now</a>
+        </div>
+
+
+    </nav>
+    
+    <section class="home" id="hero">
+        <div class="hero-content">
+        <h1>Define Your Oura. Refine Your Style.</h1>
+        <p>From precision cuts to bespoke coloring, experience the next generation of salon care.</p>
+        <button type="Book Appointment">Book Appointment</button>
+        </div>
+    </section>
+
+
+    <section id="services">
+
+    <div class="services-container">
+        <div class="service-card">
+            <h3>Bespoke Coloring</h3>
+            <p>From seamless balayage to vibrant transformations, we prioritize hair integrity with every session.</p>
+        </div>
+
+        <div class="service-card">
+              <h3>Precision Services</h3>
+        <p>A tailored approach to framing your face and enhancing your natural style.</p>       
+        </div>
+
+        <div class="service-card">
+            <h3>Precision Cuts</h3>
+            <p>Expertly crafted cuts designed to frame your features and maintain long-term style health.</p>
+        </div>
+
+        <div class="service-card">
+            <h3>Signature Styling</h3>
+            <p>Sophisticated, runway-ready looks tailored for your special events and daily confidence.</p>
+        </div>
+    </div>
+</section>
+
+   
+
+<section id="gallery" class="gallery-section">
+    <div class="gallery-header">
+        <h2>The Gallery</h2>
+        <p>A curation of precision and style.</p>
+    </div>
+
+    <div class="gallery-grid">
+        <div class="gallery-item"><img src="images/african-american-woman-overalls-beret-sitting-bar-counter.jpg" alt="Salon Work 1"><div class="overlay"><span>View</span></div></div>
+        <div class="gallery-item"><img src="images/barber-putting-towel-face-client.jpg" alt="Salon Work 2"><div class="overlay"><span>View</span></div></div>
+        <div class="gallery-item"><img src="images/girl-africa-woman-making-eyebrows-girls-beauty-salon.jpg" alt="Salon Work 3"><div class="overlay"><span>View</span></div></div>
+        <div class="gallery-item"><img src="images/hairdresser-taking-care-her-client.jpg" alt="Salon Work 4"><div class="overlay"><span>View</span></div></div>
+
+        <div class="gallery-item span-wide"><img src="images/latino-hair-salon-owner-taking-care-client.jpg" alt="Salon Work 5"><div class="overlay"><span>View</span></div></div>
+        <div class="gallery-item span-wide"><img src="images/model-career-kit-still-life-top-view.jpg" alt="Salon Work 6"><div class="overlay"><span>View</span></div></div>
+        <div class="gallery-item span-wide"><img src="images/professional-girl-hairdresser-makes-client-haircut-girl-is-sitting-mask-beauty-salon.jpg" alt="Salon Work 6"><div class="overlay"><span>View</span></div></div>
+
+        <div class="gallery-item featured"><img src="images/smiling-african-american-woman-talking-smartphone-armchair-office.jpg" alt="Featured Transformation"><div class="overlay"><span>Featured Work</span></div></div>
+        
+        <div class="gallery-item footer-img"><img src="images/woman-getting-treatment-hairdresser-shop.jpg" alt="Studio Detail"><div class="overlay"><span>The Studio</span></div></div>
+    </div>
+</section>
+
+
+    <section id="about">
+        <div class="about-container">
+
+            <div class="about-text">
+        <h2>The Art of Modern Beauty</h2>
+        <p>We don’t just provide a service; we curate an atmosphere. By blending refined craftsmanship with the latest trends in the beauty industry, our team ensures that every visit leaves you feeling confident, renewed, and perfectly styled. Welcome to the future of salon care at Oura Studio.</p>
+            </div>
+            <img src="images/black-white-room-with-neon-lights_960396-548722.jpg" alt="">
+        </div>
+    </section>
+
+
+    <section id="testimonials">
+    <h2>What Our Clients Say</h2>
+    <p>Honest reviews from those who define the Oura Studio experience.</p>
+
+    <div class="testimonial-container">
+        <div class="testimonial-card">
+            <p class="quote">"The most professional experience I’ve had in Lagos. My hair has never looked this vibrant!"</p>
+            <p class="client-name">— Amina O.</p>
+        </div>
+
+        <div class="testimonial-card">
+            <p class="quote">"I appreciate how they combine technical skill with a relaxing environment. Worth every penny."</p>
+            <p class="client-name">— Tunde B.</p>
+        </div>
+
+        <div class="testimonial-card">
+            <p class="quote">"Finally, a team that understands exactly what I want before I even explain it."</p>
+            <p class="client-name">— Sarah J.</p>
+        </div>
+    </div>
+</section>
+
+<section id="contact">
+    <div class="contact-header">
+        <h2>Connect With Us</h2>
+        <p>Ready to redefine your style? Reach out to the studio.</p>
+    </div>
+
+    <div class="contact-wrapper">
+        <div class="contact-form">
+            <form action="#">
+                <div class="input-group">
+                    <input type="text" placeholder="Full Name" required>
+                    <input type="email" placeholder="Email Address" required>
+                </div>
+                <select required>
+                    <option value="" disabled selected>Select a Service</option>
+                    <option value="coloring">Bespoke Coloring</option>
+                    <option value="cuts">Precision Cuts</option>
+                    <option value="styling">Signature Styling</option>
+                </select>
+                <textarea placeholder="Your Message or Preferred Date" rows="5"></textarea>
+                <button type="submit" class="submit-btn">Send Request</button>
+            </form>
+        </div>
+
+        <div class="contact-info">
+            <div class="info-item">
+                <h3>Location</h3>
+                <p>123 Fashion Street, Victoria Island, Lagos</p>
+            </div>
+            <div class="info-item">
+                <h3>Direct Reach</h3>
+                <p>Phone: +234 800 123 4567</p>
+                <p>Email: hello@ourastudio.com</p>
+            </div>
+            <div class="social-actions">
+                <a href="https://wa.me/+2347069138676" class="whatsapp-link">Chat on WhatsApp</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+    
+  <!-- Footer -->
+  <footer>
+    <h2>Ready for Your Transformation?</h2>
+    <p class="sub-headline">Our books are open. Secure your appointment today and experience the difference.</p>
+    <a href="#booking" class="btn">Book Now</a>
+
+    <nav class="footer-links">
+      <a href="#">Home</a> | 
+      <a href="#">Services</a>| 
+      <a href="#">Gallery</a>  | 
+      <a href="#">About</a> |   
+      <a href="#">Contact</a>
+    </nav>
+
+    <div class="socials">
+      <a href="#">Instagram</a> | 
+      <a href="#">Twitter</a> | 
+      <a href="#">LinkedIn</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
