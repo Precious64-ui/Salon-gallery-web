@@ -1,10 +1,21 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* This keeps padding INSIDE the width */
+}
+
+html, body {
+    width: 100%;
+    overflow-x: hidden; /* Prevents horizontal scrolling entirely */
+}
 
 .navbar{
     position: sticky;
  display: flex;
+ top: 0;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
+  padding: 1rem 5%;
   margin: auto;
  
   color: rgb(0, 0, 0);
@@ -80,6 +91,7 @@
 #hero button {
     padding: 15px 30px;
     background-color: red; /* Matching your logo accent */
+    border-radius: 10px;
     color: white;
     border: none;
     font-size: 1rem;
@@ -147,16 +159,18 @@
 
 
 #about{
-    padding: 80px;
+    padding: 60px 5%;
     background: black;
     color: white;
+    width: 100%;
 }
 
 .about-container {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  justify-content: space-between;
-  gap: 50px;
+  justify-content: center;
+  gap: 30px;
 }
 
 .about-text h2 {
@@ -174,6 +188,7 @@
 .about-img{
     width: 100%;
     max-width: 400px;
+    height: auto;
     border-radius:50px;   
 }
 
@@ -455,51 +470,67 @@ footer .socials a:hover {
   color: #fff;                  /* Bright hover */
 }
 
-/* Mobile Responsiveness */
-@media (max-width: 768px) {
-    .gallery-item, .gallery-item.span-wide, .gallery-item.featured, .gallery-item.footer-img {
-        grid-column: span 12; /* Stack everything vertically on phones */
-        height: 350px;
+/* --- 1. Desktop Only Rules --- */
+@media (min-width: 768px) {
+    .services-container {
+        flex-direction: row; 
     }
-}
+} /* This bracket was missing or misplaced in your code */
 
-/* Mobile Styling */
+/* --- 2. Mobile & Tablet Rules --- */
 @media (max-width: 768px) {
     .hamburger {
         display: flex;
         z-index: 1001;
     }
 
-/* Mobile Responsiveness */
-@media (max-width: 768px) {
+    /* Hide the standard nav-links list on mobile */
+    .nav-links {
+        display: none; 
+    }
+
+    #hero h1 {
+        font-size: 2.5rem; 
+    }
+
+    #hero {
+        height: 70vh; /* Shorter hero for mobile screens */
+    }
+
     .contact-wrapper {
-        grid-template-columns: 1fr; /* Stacks form and info */
+        grid-template-columns: 1fr;
+        gap: 30px;
     }
     
     .input-group {
         flex-direction: column;
     }
-}
 
-/* Mobile-friendly adjustments */
-@media (max-width: 600px) {
-  footer h2 {
-    font-size: 1.25rem;
-  }
-  footer .btn {
-    width: 100%;                /* Full-width button on mobile */
-    padding: 1rem;
-  }
-}
+    .gallery-item, 
+    .gallery-item.span-wide, 
+    .gallery-item.featured, 
+    .gallery-item.footer-img {
+        grid-column: span 12 !important; 
+        height: 300px;
+    }
 
-.services-container {
-    display: flex;
-    flex-direction: column; /* Mobile first */
-}
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
 
-@media (min-width: 768px) {
-    .services-container {
-        flex-direction: row; /* Side-by-side for desktop */
+    .about-text h2 {
+        font-size: 2rem;
     }
 }
+
+/* --- 3. Extra Small Phone Rules --- */
+@media (max-width: 600px) {
+    footer h2 {
+        font-size: 1.25rem;
+    }
+    footer .btn {
+        width: 100%;
+        padding: 1rem;
+    }
 }
