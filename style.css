@@ -87,7 +87,7 @@ html, body {
 .hamburger span, .hamburger .bar { /* Added .bar class here */
     width: 25px;
     height: 3px;
-    background-color: white; /* Start white to see it on the hero */
+    background-color: rgb(255, 255, 255); /* Start white to see it on the hero */
     transition: 0.3s;
 }
 
@@ -193,14 +193,12 @@ html, body {
 }
 
 
-#about{
-    margin: auto;
-    padding: 60px;
-    background: black;
-    color: white;
+#about {
+    padding: 80px 5%; /* Matches #services, #gallery, and #contact */
+    background: #000;
+    color: #fff;
     width: 100%;
-    align-items: center;
-    text-align: center;
+    overflow: hidden; /* Prevents the image from pushing the screen wide */
 }
 
 .about-container {
@@ -228,14 +226,13 @@ html, body {
   margin-right: 10px;
 }
 
-.about-img{
+.about-container img {
     width: 100%;
-    max-width: 400px;
+    max-width: 500px; /* Limits size on desktop */
     height: auto;
-    border-radius:50px;   
+    border-radius: 20px; /* Softens the look */
+    margin-top: 30px; /* Adds space when it stacks on mobile */
 }
-
-
 
     /* Gallery Container */
 .gallery-section {
@@ -547,6 +544,7 @@ footer .socials a:hover {
     }
 } /* Correctly closes desktop rules */
 
+
 /* --- 2. Mobile & Tablet Rules (Integrated) --- */
 @media (max-width: 768px) {
     .hamburger {
@@ -581,6 +579,7 @@ footer .socials a:hover {
 
     .nav-links a {
         font-size: 1.5rem;
+        color: #000 !important; /* Ensures links are black on the white mobile menu */
     }
 
     /* Hamburger Animation */
@@ -592,12 +591,21 @@ footer .socials a:hover {
     #hero h1 { font-size: 2.5rem; }
     #hero { height: 70vh; }
     
+    /* ABOUT SECTION MOBILE FIX */
     .about-container {
-        flex-direction: column;
+        flex-direction: column; 
         text-align: center;
     }
 
-    .about-text h2 { font-size: 2rem; }
+    .about-text h2 {
+        margin-right: 0; 
+        font-size: 2rem;
+    }
+
+    .about-text p {
+        margin: 0 auto; 
+        padding: 0 10px;
+    }
     
     .contact-wrapper { grid-template-columns: 1fr; gap: 30px; }
     
@@ -605,7 +613,8 @@ footer .socials a:hover {
         grid-column: span 12 !important; 
         height: 300px;
     }
-} /* Correctly closes mobile rules */
+} /* This correctly closes the mobile rules */
+
 
 /* --- 3. Extra Small Phone Rules --- */
 @media (max-width: 600px) {
