@@ -41,6 +41,45 @@ html, body {
   transition: color 0.3s;
 }
 
+@media (max-width: 768px) {
+    /* 1. Update your existing .nav-links to this */
+    .nav-links {
+        display: flex; /* Change from 'none' to 'flex' */
+        position: fixed;
+        left: -100%; /* Keeps it hidden off-screen */
+        top: 70px;
+        gap: 0;
+        flex-direction: column;
+        background-color: #fff;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+    }
+
+    /* 2. Add this: When JS adds 'active', slide it in */
+    .nav-links.active {
+        left: 0;
+    }
+
+    .nav-links li {
+        margin: 25px 0;
+    }
+
+    /* 3. The "X" Animation Code */
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+}
+
 .nav-links li a:hover {
    color: red;
 }
@@ -166,6 +205,7 @@ html, body {
     background: black;
     color: white;
     width: 100%;
+    align-items: center;
 }
 
 .about-container {
@@ -402,15 +442,15 @@ input:focus, select:focus, textarea:focus {
     display: inline-block;
     margin-top: 20px;
     padding: 12px 25px;
-    border: 1px solid #25D366; /* WhatsApp Green */
-    color: #25D366;
+    border: 1px solid #15ce05; /* WhatsApp Green */
+    color: #070707;
     text-decoration: none;
     border-radius: 50px;
     transition: all 0.3s ease;
 }
 
 .whatsapp-link:hover {
-    background-color: #25D366;
+    background-color: #c70202;
     color: #fff;
 }
 

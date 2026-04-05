@@ -54,12 +54,20 @@ window.addEventListener('scroll', () => {
 });
 
     const hamburger = document.getElementById('hamburger');
-    const navLinks = document.getElementById('nav-links');
+const navLinks = document.querySelector('.nav-links');
 
-    hamburger.addEventListener('click', () => {
-        // This line adds/removes the "active" class whenever you click
-        navLinks.classList.toggle('active');
-        
-        // Optional: Animate the hamburger to an "X"
-        hamburger.classList.toggle('toggle');
+hamburger.addEventListener('click', () => {
+    // This toggles the visibility of the menu
+    navLinks.classList.toggle('active');
+    
+    // This triggers the "X" animation for the bars
+    hamburger.classList.toggle('active');
+});
+
+// Close menu when a link is clicked
+document.querySelectorAll('.nav-links li a').forEach(link => {
+    link.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+        hamburger.classList.remove('active');
     });
+});
